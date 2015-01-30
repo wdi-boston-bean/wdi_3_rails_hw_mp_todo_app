@@ -18,7 +18,7 @@ By the end of this, students should be able to:
 - Build an app according to the requirements below. You should plan your work and commit when each task you set for yourself is complete.
 - When you are ready to submit, push your changes and open a pull request.
 
-## Requirements
+## TODO LIST APP: Requirements
 
 Your todo app should:
 
