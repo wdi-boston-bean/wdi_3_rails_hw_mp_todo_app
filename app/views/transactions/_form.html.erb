@@ -3,6 +3,10 @@
     <%= f.label :amount %><br>
     <%= f.text_field :amount %>
   </p>
+  <p>
+    <%= f.label :category %>
+    <%= f.collection_select :category_id, Category.all, :id, :name, {:prompt => :true} %>
+  </p>
  
   <p>
     <%= f.submit %>
