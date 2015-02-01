@@ -14,6 +14,7 @@
     <% @transactions.each do |transaction| %>
       <tr>
         <td><%= number_to_currency transaction.amount %></td>
+        <td><%= transaction.category.name %></td>
       </tr>
     <% end %>
   </tbody>
