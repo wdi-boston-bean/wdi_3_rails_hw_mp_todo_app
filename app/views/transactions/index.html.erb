@@ -13,7 +13,7 @@
   <tbody>
     <% @transactions.each do |transaction| %>
       <tr>
-        <td><%= number_to_currency transaction.amount %></td>
+      <td><%= link_to (number_to_currency transaction.amount), transaction_path(transaction) %></td>
         <td><%= transaction.category.name %></td>
       </tr>
     <% end %>
