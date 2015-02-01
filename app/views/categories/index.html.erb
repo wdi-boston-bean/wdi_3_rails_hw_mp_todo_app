@@ -13,6 +13,10 @@
   <tbody>
     <% @categories.each do |category| %>
     <td> <%= category.name %> </td>
+    <td> <% category.transactions.each do |transaction| %> 
+    <%= transaction.amount %>
+    <% end %>
+    </td>
       </tr>
     <% end %>
   </tbody>
