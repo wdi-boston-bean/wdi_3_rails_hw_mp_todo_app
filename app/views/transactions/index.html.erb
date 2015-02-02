@@ -14,7 +14,7 @@
     <% @transactions.each do |transaction| %>
       <tr>
       <td><%= link_to (number_to_currency transaction.amount), transaction_path(transaction) %></td>
-        <td><%= transaction.category.name %></td>
+        <td><%= link_to (transaction.category.name), category_path(transaction.category) %></td>
       </tr>
     <% end %>
   </tbody>
