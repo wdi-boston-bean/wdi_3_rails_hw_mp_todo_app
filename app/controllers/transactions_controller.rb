@@ -5,6 +5,7 @@ class TransactionsController < ApplicationController
 
   def show
     @transaction = Transaction.find(params[:id])
+    @comment = @transaction.comments.build
   end
 
   def new

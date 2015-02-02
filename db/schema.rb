@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150201002203) do
+ActiveRecord::Schema.define(version: 20150202015059) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20150201002203) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.integer  "transaction_id"
+    t.text     "body"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "comments", ["transaction_id"], name: "index_comments_on_transaction_id", using: :btree
+
   create_table "transactions", force: :cascade do |t|
     t.integer  "category_id"
     t.decimal  "amount"
@@ -31,5 +40,6 @@ ActiveRecord::Schema.define(version: 20150201002203) do
 
   add_index "transactions", ["category_id"], name: "index_transactions_on_category_id", using: :btree
 
+  add_foreign_key "comments", "transactions"
   add_foreign_key "transactions", "categories"
 end

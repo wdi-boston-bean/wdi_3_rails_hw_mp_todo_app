@@ -1,28 +1,26 @@
-== README
+add upcoming payment comments with categories
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+don't know if you can have a model belong to two others, like comments belonging to both categories and transactions
 
-Things you may want to cover:
+add transaction date
 
-* Ruby version
+set app homepage to transactions index
 
-* System dependencies
+add accounts 
 
-* Configuration
+To Do
 
-* Database creation
+category table/controller/model - id, name
 
-* Database initialization
+users - each user can be linked to a default personal account, has usernames, passwords, ids - where/how do I do a sign in?
 
-* How to run the test suite
+accounts - individual ones and shared
 
-* Services (job queues, cache servers, search engines, etc.)
+for each transation, track direction of flow account from and account to [house, individual accounts, out] - each transation is two for amount leaving and then going in - every transaction is a tranfser
 
-* Deployment instructions
+payment types
+out
+shared
+direct
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+when you imput an amount, you specify account_from and account2_to

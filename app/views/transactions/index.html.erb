@@ -6,6 +6,8 @@
   <thead>
     <tr>
       <th>Amount</th>
+      <th>Category</th>
+      <th>Comments</th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -15,6 +17,8 @@
       <tr>
       <td><%= link_to (number_to_currency transaction.amount), transaction_path(transaction) %></td>
         <td><%= link_to (transaction.category.name), category_path(transaction.category) %></td>
+      <td><%= transaction.comments.length %></td>
+
       </tr>
     <% end %>
   </tbody>

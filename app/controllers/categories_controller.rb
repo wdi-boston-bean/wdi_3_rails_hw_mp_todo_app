@@ -14,10 +14,10 @@ class CategoriesController < ApplicationController
     else
       render 'new' 
     end
+  end
 
-    def show
-      @category = Category.find(params[:id])
-    end
+  def show
+    @category = Category.find(params[:id])
   end
 
   private

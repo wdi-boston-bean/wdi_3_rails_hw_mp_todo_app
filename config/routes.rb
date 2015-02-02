@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+
+
   resources :categories
-  resources :transactions
+  resources :transactions do
+    resources :comments
+  end
 
 end
   # The priority is based upon order of creation: first created -> highest priority.

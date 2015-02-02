@@ -4,6 +4,15 @@
   <strong>Amount:</strong>
   <p><%= @transaction.amount %></p>
   <p><%= @transaction.category.name %></p>
+  <h2>Comments</h2>
+  <% @transaction.comments.each do |comment| %>
+    <p>
+      <%= comment.body %>
+      <%= link_to 'Delete', [@transaction, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+  <% end %>
+  <h2>Add a comment:</h2>
+  <%= render 'comments/form' %>
 </p>
 
 <%= link_to 'Edit', edit_transaction_path(@transaction) %> |
