@@ -1,16 +1,8 @@
-add upcoming payment comments with categories
-
-don't know if you can have a model belong to two others, like comments belonging to both categories and transactions
-
-add transaction date
+add transaction date you can backdate, set
 
 set app homepage to transactions index
 
-add accounts 
-
-To Do
-
-category table/controller/model - id, name
+add style
 
 users - each user can be linked to a default personal account, has usernames, passwords, ids - where/how do I do a sign in?
 
